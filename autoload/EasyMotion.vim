@@ -1096,7 +1096,7 @@ function! s:PromptUser(groups) "{{{
     " }}}
 
     " Invoke autocmd so the user can temporarily disable linters, etc.
-    doautocmd User EasyMotionPromptBegin
+    silent! doautocmd User EasyMotionPromptBegin
 
     " -- Put labels on targets & Get User Input & Restore all {{{
     " Save undo tree
@@ -1153,7 +1153,7 @@ function! s:PromptUser(groups) "{{{
         redraw
 
         " Invoke autocmd
-        doautocmd User EasyMotionPromptEnd
+        silent! doautocmd User EasyMotionPromptEnd
     endtry "}}}
 
     " -- Check if we have an input char ------ {{{
